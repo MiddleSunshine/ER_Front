@@ -1,0 +1,10 @@
+
+build/
+
+node_modules/
+
+tsconfig.json
+
+.DS_Store
+
+package-lock.json
