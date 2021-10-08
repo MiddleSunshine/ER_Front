@@ -17,7 +17,7 @@ class WordsCharts extends React.Component{
         this.getOption=this.getOption.bind(this);
     }
     getSummaryData(){
-        return requestApi(config.back_domain+"/ER.php?action=Summary&method=WordsSummary").then((res)=>{
+        return requestApi("/index.php?action=Summary&method=WordsSummary").then((res)=>{
             return res.json();
         });
     }

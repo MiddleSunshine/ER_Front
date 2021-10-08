@@ -27,7 +27,7 @@ class SentenceEdit extends React.Component {
     }
 
     getWords() {
-        requestApi( "/ER.php?action=Sentence&method=getWords&sentence_id=" + this.state.id)
+        requestApi( "/index.php?action=Sentence&method=getWords&sentence_id=" + this.state.id)
             .then((res) => {
                 res.json().then((json) => {
                     this.setState({
@@ -88,7 +88,7 @@ class SentenceEdit extends React.Component {
             message.warn("Please input word");
         } else{
             requestApi(
-                "/ER.php?action=sentence&method=saveWords",
+                "/index.php?action=sentence&method=saveWords",
                 {
                     method: "post",
                     body: JSON.stringify({

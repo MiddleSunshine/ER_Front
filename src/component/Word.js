@@ -29,7 +29,7 @@ class Word extends React.Component {
                 return false;
             }
         }
-        requestApi( "/ER.php?action=words&method=detail&id=" + id)
+        requestApi( "/index.php?action=words&method=detail&id=" + id)
             .then(
                 (res) => {
                     res.json().then((json) => {
@@ -106,7 +106,7 @@ class Word extends React.Component {
     saveWord() {
         let word = this.state.word;
         word.phonetic_transcription = getSymbolSaveData();
-        requestApi( "/ER.php?action=words&method=save&id=" + this.state.id, {
+        requestApi( "/index.php?action=words&method=save&id=" + this.state.id, {
             method: "post",
             mode: "cors",
             body: JSON.stringify(word)

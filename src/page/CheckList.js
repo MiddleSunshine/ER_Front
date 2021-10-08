@@ -19,7 +19,7 @@ class CheckList extends React.Component{
     }
 
     getWords(){
-        requestApi("/ER.php?action=Check&method=List")
+        requestApi("/index.php?action=Check&method=List")
             .then((response)=>{
                 response.json().then((json)=>{
                     this.setState({

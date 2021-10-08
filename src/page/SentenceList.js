@@ -44,7 +44,7 @@ class SentenceList extends React.Component {
 
     getSentenceList() {
         requestApi(
-            "/ER.php?action=Sentence&method=list"
+            "/index.php?action=Sentence&method=list"
         ).then((res) => {
             res.json().then((json) => {
                 this.setState({

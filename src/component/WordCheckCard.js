@@ -35,7 +35,7 @@ export class WordCheckCard extends React.Component{
         this.recordResult(this.state.id,2);
     }
     info(){
-        requestApi("/ER.php?action=Sentence&method=GetSentenceByWordId&word_id="+this.state.id)
+        requestApi("/index.php?action=Sentence&method=GetSentenceByWordId&word_id="+this.state.id)
             .then((res)=>{
                 res.json().then((json)=>{
                     this.setState({
@@ -55,7 +55,7 @@ export class WordCheckCard extends React.Component{
             check_result='fail';
         }
         requestApi(
-            "/ER.php?action=CheckLog&method=AddCheckLog",
+            "/index.php?action=CheckLog&method=AddCheckLog",
             {
                 method:"post",
                 mode:"cors",

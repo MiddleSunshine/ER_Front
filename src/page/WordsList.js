@@ -57,7 +57,7 @@ class WordsList extends React.Component {
     }
 
     getWordsList() {
-        requestApi("/ER.php?action=words&method=list")
+        requestApi("/index.php?action=words&method=list")
             .then(
                 (res) => {
                     res.json().then((json) => {

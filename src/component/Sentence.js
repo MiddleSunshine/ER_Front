@@ -30,7 +30,7 @@ class Sentence extends React.Component {
             return false;
         }
         requestApi(
-            "/ER.php?action=sentence&method=detail&id=" + id
+            "/index.php?action=sentence&method=detail&id=" + id
         ).then((res) => {
             res.json().then((json) => {
                 this.setState({
@@ -85,7 +85,7 @@ class Sentence extends React.Component {
 
     saveSentence() {
         console.log(this.state.sentenceData);
-        requestApi("/ER.php?action=sentence&method=save&id=" + this.state.id, {
+        requestApi("/index.php?action=sentence&method=save&id=" + this.state.id, {
             method: "post",
             body: JSON.stringify(this.state.sentenceData)
         }).then((res) => {

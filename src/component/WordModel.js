@@ -16,7 +16,7 @@ class WordModel extends React.Component {
 
     getWordId(word) {
         requestApi(
-            "/ER.php?action=Words&method=GetID",
+            "/index.php?action=Words&method=GetID",
             {
                 method: "post",
                 mode: "cors",
